@@ -1,6 +1,4 @@
 {
-  "lint-staged": {
-    "*.ts": "yarn typecheck",
-    "*.{js,json,ts}": ["yarn format", "yarn eslint"]
-  }
+  "*.ts": "yarn typecheck",
+  "*.{js,json,ts}": ["yarn format", "yarn eslint"]
 }
