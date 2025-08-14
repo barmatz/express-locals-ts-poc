@@ -26,8 +26,17 @@ export default tseslint.config(
       'simple-import-sort': simpleImportSort,
     },
     rules: {
-      'simple-import-sort/imports': 'error',
+      'padding-line-between-statements': [
+        'error',
+        {
+          blankLine: 'always',
+          next: ['const', 'let', 'var'],
+          prev: ['const', 'let', 'var'],
+        },
+      ],
       'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
+      'sort-keys': 'error',
     },
   },
 );
