@@ -1,20 +1,22 @@
 {
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "outDir": "./dist",
-    "module": "nodenext",
+    "module": "NodeNext",
     "target": "esnext",
-    "types": [],
+    "types": ["node"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "strict": true,
-    "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
+    "lib": ["esnext"]
   }
 }
