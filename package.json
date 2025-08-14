@@ -1,0 +1,11 @@
+{
+  "name": "express-locals-ts-poc",
+  "packageManager": "yarn@4.6.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2"
+  }
+}
