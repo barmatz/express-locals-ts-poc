@@ -1,10 +1,10 @@
 import eslint from '@eslint/js';
 import json from '@eslint/json';
-import { globalIgnores } from 'eslint/config';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import importPlugin from 'eslint-plugin-import';
+import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier/recommended';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import { globalIgnores } from 'eslint/config';
 import { dirname } from 'path';
 import { config, configs } from 'typescript-eslint';
 import { fileURLToPath } from 'url';
@@ -16,6 +16,7 @@ export default config(
   configs.recommendedTypeChecked,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
+  perfectionist.configs['recommended-alphabetical'],
   {
     languageOptions: {
       parserOptions: {
@@ -26,9 +27,6 @@ export default config(
   },
   json.configs.recommended,
   {
-    plugins: {
-      'simple-import-sort': simpleImportSort,
-    },
     rules: {
       'import/first': 'error',
       'import/newline-after-import': 'error',
@@ -42,11 +40,11 @@ export default config(
           prev: ['const', 'let', 'var'],
         },
       ],
-      'simple-import-sort/exports': 'error',
-      'simple-import-sort/imports': [
+      'perfectionist/sort-imports': [
         'error',
         {
-          groups: [['^\\u0000', '^@?\\w', '^[^.]', '^\\.']],
+          newlinesBetween: 0,
+          partitionByNewLine: false,
         },
       ],
       'sort-keys': 'error',
