@@ -43,7 +43,12 @@ export default config(
         },
       ],
       'simple-import-sort/exports': 'error',
-      'simple-import-sort/imports': 'error',
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [['^\\u0000', '^@?\\w', '^[^.]', '^\\.']],
+        },
+      ],
       'sort-keys': 'error',
     },
     settings: {

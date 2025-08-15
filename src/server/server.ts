@@ -1,6 +1,5 @@
 import config from 'config';
 import express from 'express';
-
 import { logger } from '../logger';
 import { configRoutes } from './routes';
 
