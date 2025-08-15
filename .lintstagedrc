@@ -1,4 +1,4 @@
 {
-  "*.ts": "yarn typecheck",
-  "*.{js,json,ts}": ["yarn format", "yarn eslint"]
+  "*.ts": "sh -c 'tsc --noEmit'",
+  "*.{js,json,ts}": ["prettier --write .", "eslint ."]
 }
